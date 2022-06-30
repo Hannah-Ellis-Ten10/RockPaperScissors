@@ -32,7 +32,9 @@ public class ComputerStrategyPlayer implements Player{
                     myChoice = Choice.PAPER;
             }
         }
-        myChoice = rng.getChoice();
+        else {
+            myChoice = rng.getChoice();
+        }
     }
 }
 

@@ -21,6 +21,6 @@ public class Main {
     static public void main(String[] args){
         System.out.println("Welcome to Hannah's Rock Paper Scissors Game");
         Game game = new Game(new HumanPlayer(),promptForComputerPlayerForMode());
-        game.play();
+        game.playBestOf(5);
     }
 }

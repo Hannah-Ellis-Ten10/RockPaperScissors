@@ -18,7 +18,7 @@ public class ComputerRandomPlayer implements Player{
     }
 
     @Override
-    public void addOppoentChoice(Choice choice) {
+    public void addOppoentChoice(String name,Choice choice) {
         //Do nothing, we don't care what out opponent did
     }
 

@@ -22,8 +22,8 @@ public class Game {
         do{
             Choice firstPlayerChoice = player1.getChoice();
             Choice secondPlayerChoice = player2.getChoice();
-            player1.addOppoentChoice(player2.getName(),secondPlayerChoice);
-            player2.addOppoentChoice(player1.getName(),firstPlayerChoice);
+            player1.addOpponentChoice(player2.getName(),secondPlayerChoice);
+            player2.addOpponentChoice(player1.getName(),firstPlayerChoice);
             outcome = runRound(firstPlayerChoice,secondPlayerChoice);
         }while(outcome == GameOutcome.DRAW);
         if(outcome == GameOutcome.PLAYER1WINS){

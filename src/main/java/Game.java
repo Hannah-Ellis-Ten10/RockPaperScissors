@@ -1,4 +1,4 @@
-public class Game {
+abstract class Game {
     Player player1,player2;
     Game(Player player1,Player player2){
         this.player1 = player1;
@@ -17,7 +17,7 @@ public class Game {
             return GameOutcome.PLAYER2WINS;
         }
     }
-    private GameOutcome playSingleGame(){
+    protected GameOutcome playSingleGame(){
         GameOutcome outcome ;
         do{
             Choice firstPlayerChoice = player1.getChoice();
@@ -28,15 +28,7 @@ public class Game {
         }while(outcome == GameOutcome.DRAW);
         return outcome;
     }
-    public void play(){
-        GameOutcome outcome = playSingleGame();
-        if(outcome == GameOutcome.PLAYER1WINS){
-            System.out.println(player1.getName()+" has won");
-        }
-        else{
-            System.out.println(player2.getName()+" has won");
-        }
-    }
+    abstract public void play();
     public void playBestOf(int rounds){
         System.out.println("Starting best of "+ rounds+" rounds");
         int scoreToWin = 1 + (rounds / 2) ;

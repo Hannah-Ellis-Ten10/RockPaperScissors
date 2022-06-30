@@ -1,9 +1,7 @@
-import java.util.Random;
-
 public class ComputerRandomPlayer implements Player{
-    Random rng;
+    RandomChoice rng;
     ComputerRandomPlayer(){
-        rng = new Random();
+        rng = new RandomChoice();
     }
     @Override
     public String getName() {
@@ -12,13 +10,11 @@ public class ComputerRandomPlayer implements Player{
 
     @Override
     public Choice getChoice() {
-        Choice[] choices = Choice.values();
-        int randomIndex = rng.nextInt(choices.length);
-        return choices[randomIndex];
+        return rng.getChoice();
     }
 
     @Override
-    public void addOppoentChoice(String name,Choice choice) {
+    public void addOpponentChoice(String name, Choice choice) {
         //Do nothing, we don't care what out opponent did
     }
 

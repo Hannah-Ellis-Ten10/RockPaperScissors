@@ -1,5 +1,5 @@
 public interface Player {
     String getName();
     Choice getChoice();
-    void addOppoentChoice(String name,Choice choice);
+    void addOpponentChoice(String name, Choice choice);
 }

@@ -42,7 +42,7 @@ public class HumanPlayer implements Player{
     }
 
     @Override
-    public void addOppoentChoice(String name,Choice choice) {
+    public void addOpponentChoice(String name, Choice choice) {
         System.out.println(name+" chose "+choice);
     }
 }

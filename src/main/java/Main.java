@@ -7,6 +7,11 @@ public class Main {
         do {
             outcome = game.play(player1.getChoice(), player2.getChoice());
         }while(outcome == GameOutcome.DRAW);
-        System.out.println(outcome);
+        if(outcome == GameOutcome.PLAYER1WINS){
+            System.out.println(player1.getName()+" has won");
+        }
+        else{
+            System.out.println(player2.getName()+" has won");
+        }
     }
 }
